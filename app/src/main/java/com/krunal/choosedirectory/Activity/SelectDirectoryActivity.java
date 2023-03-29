@@ -102,69 +102,6 @@ public class SelectDirectoryActivity extends AppCompatActivity {
     }
 
 
-//    private void getFilesList(String filePath) {
-//        rootPath = filePath;
-//        setTitle(filePath);
-//
-////        lblFilePath.setText(filePath);
-//        try {
-//            File root = new File(filePath);
-//
-//            File[] fileArray = root.listFiles();
-//            List<File> files = new ArrayList<>();
-//            if (fileArray != null) {
-//                files = Arrays.asList(fileArray);
-//
-//                Collections.sort(files, (lhs, rhs) -> {
-//                    if (lhs.isDirectory() && !rhs.isDirectory()) {
-//                        return -1;
-//                    } else if (!lhs.isDirectory() && rhs.isDirectory()) {
-//                        return 1;
-//                    } else {
-//                        return lhs.getName().toLowerCase().compareTo(rhs.getName().toLowerCase());
-//                    }
-//                });
-//
-//            }
-//
-//            adapter.AddItems(files);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//
-//        }
-//    }
-//
-//
-//
-//
-//    private boolean validPath(String path) {
-//        try {
-//            StatFs stat = new StatFs(path);
-//            stat.getBlockCount();
-//
-//            return true;
-//        } catch (Exception e) {
-////            CrashUtils.report(e);
-//
-//            return false;
-//        }
-//    }
-
-
-//    @Override
-//    public void onBackPressed() {
-//        try {
-//            getFilesList(new File(rootPath).getAbsoluteFile().getParent());
-//
-//        }catch (Exception e){
-//
-//        }
-//
-////        super.onBackPressed();
-//    }
-
-
     public void addFragment(FolderFragment fragment, boolean addToBackStack) {
         fragments.push(fragment);
 
@@ -281,4 +218,69 @@ public class SelectDirectoryActivity extends AppCompatActivity {
             finish();
         }
     }
+
+
+//    private void getFilesList(String filePath) {
+//        rootPath = filePath;
+//        setTitle(filePath);
+//
+////        lblFilePath.setText(filePath);
+//        try {
+//            File root = new File(filePath);
+//
+//            File[] fileArray = root.listFiles();
+//            List<File> files = new ArrayList<>();
+//            if (fileArray != null) {
+//                files = Arrays.asList(fileArray);
+//
+//                Collections.sort(files, (lhs, rhs) -> {
+//                    if (lhs.isDirectory() && !rhs.isDirectory()) {
+//                        return -1;
+//                    } else if (!lhs.isDirectory() && rhs.isDirectory()) {
+//                        return 1;
+//                    } else {
+//                        return lhs.getName().toLowerCase().compareTo(rhs.getName().toLowerCase());
+//                    }
+//                });
+//
+//            }
+//
+//            adapter.AddItems(files);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//
+//        }
+//    }
+//
+//
+//
+//
+//    private boolean validPath(String path) {
+//        try {
+//            StatFs stat = new StatFs(path);
+//            stat.getBlockCount();
+//
+//            return true;
+//        } catch (Exception e) {
+////            CrashUtils.report(e);
+//
+//            return false;
+//        }
+//    }
+
+
+//    @Override
+//    public void onBackPressed() {
+//        try {
+//            getFilesList(new File(rootPath).getAbsoluteFile().getParent());
+//
+//        }catch (Exception e){
+//
+//        }
+//
+////        super.onBackPressed();
+//    }
+
+
 }
